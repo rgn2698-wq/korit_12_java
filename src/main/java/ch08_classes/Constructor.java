@@ -45,5 +45,50 @@ public class Constructor {
         this.num = number;  // this : 해당 클래스에서 객체를 생성하게 되면 객체 이름으로 대체됨.
 
 
+
+
+        }
+
+    public Constructor(String title) {
+        System.out.println("RequiredArgsConstructor(String 매개변수를 필수로 요구하는 생성자)");
+        this.name = title;
     }
+
+    public Constructor(int num, String name) {
+        System.out.println("AllArgsConstructor(int, String 전부를 매개변수로 요구하는 생성자)");
+        this. num = num;
+        this. name = name;
+    }
+
+    public void displayInfo() {
+        System.out.println(name + "학생의 번호는" + num + "번입니다.");
+    }
+
+    /*
+        지시 사항 # 1
+        String title을 매개변수로 하는 생성자를 정의하고,
+        RequiredArgsConstructor(String 매개변수를 필수로 요구하는 생성자) 라는 안내문을
+        출력할 수 있도록 작성한 뒤
+        ConstructorMain으로 가서 constructor4라는 객체명을 지니고, title에 "김사"으로
+        이름 붙이고 객체를 생성한 후,
+        System.out.println(contructor4.name);을 입력하여 콘솔에 "김사"를 출력하시오.
+
+        지시 사항 # 2
+        int num, String name을 매개변수로 하는 생성자를 정의하고
+        AllArgsConstructor(int, String 전부를 매개변수로 요구하는 생성자) 라는 안내문을
+        출력할 수 있도록 작성한 뒤
+        ConstructorMain으로 가서 constructor5라는 객체명을 지니고, 5, "김오"라고
+        값을 대입한 객체를 생성한 후
+        south(constructor5.num);
+        south(constructor5.name);
+        을 출력하시오.
+
+        지시 사항 #3
+        Car.java 파일 내에 있는 displayinfo() 메서드를 참조하여
+        constructor5.displayinfo();를 호출했으경우
+        김오 학생의 학번은 5번 입니다.
+        를 콘솔에 출력할 수 있도록 Constructor.java에 displayinfo()메서드를 call1()
+        유형으로 작성하고
+        ConstructorMain에서 호출하시오.
+     */
 }
