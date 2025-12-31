@@ -10,12 +10,11 @@ class AccessModifierExample {   // 간판 클래스는 public이 명시돼야 �
     public int getPrivateVar() {
         return privateVar;
     }
-
-
 }
 
 public class Main {
     public static void main(String[] args) {
+        // 객체 생성 : default class니까 객체 생성이 가능
         AccessModifierExample example = new AccessModifierExample();
         // field 조회
         System.out.println(example.publicVar);
