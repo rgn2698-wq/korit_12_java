@@ -3,7 +3,6 @@ package ch11_arrays;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
-import java.util.Scanner;
 
 /*
     아까 random.nextInt();를 한번 써봤습니다.
@@ -23,7 +22,6 @@ import java.util.Scanner;
 public class Array11 {
     public static void main(String[] args) {
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
 
         Integer[] nums = new Integer[10];
 
