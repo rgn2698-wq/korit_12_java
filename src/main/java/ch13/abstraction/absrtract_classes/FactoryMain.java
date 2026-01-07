@@ -16,7 +16,17 @@ public class FactoryMain {
         factory1.setName("임시 공장");      // 원래 객체 생성을 못하는데 Factory 객체가
         factory1.produce("모니터");    // 생성되었고, method 호출도 한다는 점이 문제입니다.
         /*
-            이상의 개념은 일반 클래스도 Java1;1 -> 근데 이 형식은 자주
+            이상의 개념은 익명 클래스로 Java1.1 -> 근데 이 형식은 자주 쓰인다기 보다 추후 학습할 람다식
+            (Lambda Expression)으로 대체되는 경우가 많습니다(그리고 JavaScript에서도 동일한 방식을
+            사용합니다)
+
+            재사용하지 않고 한 번만, 즉 이 경우에는 FactoryMain에서만 한 번 쓰고 치운다면 사용하기
+            좋습니다.
+
+            저희는 교육 상황이기 때문에 모든 클래스를 한 번 정의하고 그걸로 객체 한 두 개 만들고 치우는
+            경우가 많아서 모든 수업을 위처럼 익명 클래스로 정의할 수도 있지만
+            기본적으로 여러 프로그램에서 동시에 쓸 객체가 아닌 경우에 익명 클래스를 통해 임시 객체 생성이
+            가능하도록 지원한다고 보시면 됩니다.
          */
         // PhoneFactory 객체 생성
         PhoneFactory phoneFactory1 = new PhoneFactory();
@@ -44,5 +54,36 @@ public class FactoryMain {
             만약 부모 클래스에 showinfo() 메서드가 있는걸 몰랐다면
             PhoneFactory 클래스에 별개의 showInfo() 메서드를 따로 정의했을테니까요
          */
+        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+        TabletFactory tabletFactory1 = new TabletFactory();
+        tabletFactory1.setName("애플 태블릿 공장");
+
+        String factoryName = tabletFactory1.getName();
+        tabletFactory1.setName("구글 태블릿 공장");
+        tabletFactory1.upgrade("아이패드 프로 13인치 8세대");
+        System.out.println("현재 공장은 " + tabletFactory1.getName() + "으로 변경되었습니다.");
+
+        tabletFactory1.produce("구글 태블릿");
+        tabletFactory1.manage();
+
+        tabletFactory1.upgrade("구글 태블릿 10인치 2세대");
+
+        Factory factory2 = new Factory() {
+            @Override
+            public void produce(String model) {
+                System.out.println(model + "컴퓨터를 생산합니다.");
+            }
+
+            @Override
+            public void manage() {
+                System.out.println("컴퓨터 공장을 관리합니다.");
+            }
+        };
+        factory2.setName("삼성 컴퓨터 공장");
+        factory2.showInfo();
+
+
+
+
     }
 }
