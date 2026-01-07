@@ -32,8 +32,7 @@ public class EBook extends Book{
     // Override 설정
     @Override
     public void showInfo() {
-        System.out.println("제목 : " + getTitle());
-        System.out.println("저자 : " + getAuthor());
+        super.showInfo();
         System.out.println("파일 크기 :" + fileSize + "MB");
         System.out.println("파일 형식 :" + format);
     }
