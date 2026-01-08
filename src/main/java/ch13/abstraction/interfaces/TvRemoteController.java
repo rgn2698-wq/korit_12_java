@@ -65,8 +65,9 @@ public class TvRemoteController {
     public void onPressedChannelUpButton() {
         channelUpButton.onPressed();
     }
-    public void onUpChannelUp() {
-        channelUpButton.onUp();
+
+    public String onUpChannelUp() {
+        return channelUpButton.onUp();
     }
 
     public void onPressedVolumeDownButton() {
@@ -81,7 +82,7 @@ public class TvRemoteController {
         volumeUpButton.onPressed();
     }
 
-    public void onUpVolumeUp() {
-        volumeUpButton.onUp();
+    public String onUpVolumeUp() {
+       return volumeUpButton.onUp();
     }
 }

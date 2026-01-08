@@ -104,5 +104,28 @@ public class Main {
         tvRemoteController2.onUpVolumeUp();
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         tvRemoteController2.onPressedPowerButton();
+        System.out.println();
+
+
+        AirConditionerController airConditionerController = new AirConditionerController(
+                new PowerButton(),
+                new ModeChangeButton(),
+                new TemperatureDownButton(),
+                new TemperatureUpButton()
+        );
+        System.out.println();
+        airConditionerController.onPressedPowerButton();
+        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+        airConditionerController.onPressedTemperatureDownButton();
+        airConditionerController.onDownTemperatureDownButton();
+        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+        airConditionerController.onPressedTemperatureUpButton();
+        airConditionerController.onUpTemperatureUpButton();
+        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+        airConditionerController.onPressedModeChangeButton();
+        airConditionerController.onPressedModeChangeButton();
+        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+        airConditionerController.onPressedPowerButton();
+        System.out.println();
     }
 }
