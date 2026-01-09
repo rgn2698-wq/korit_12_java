@@ -61,8 +61,8 @@ public class CentralControlMain {
         centralControl1.showInfo();
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
 
-        centralControl1.deleteDevice(3);
-        centralControl1.deleteDevice(computer1);
+        centralControl1.deleteDevice(1);
+        centralControl1.deleteDevice(led1);
 
         centralControl1.showInfo();
 
