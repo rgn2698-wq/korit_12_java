@@ -1,6 +1,5 @@
 package ch17_static.builders;
 
-import java.util.zip.ZipError;
 
 public class PersonMain {
     public static void main(String[] args) {
